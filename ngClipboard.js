@@ -31,16 +31,18 @@ angular.module('ngClipboard', [])
             link:link
         };
         function link(scope, element, attrs) {
-+            element.bind('click',function(){
-+                var range = document.createRange();
-+                range.selectNode(element[0]);
-+                window.getSelection().addRange(range);
-+                var successful = document.execCommand('copy');
-+
-+                var msg = successful ? 'successful' : 'unsuccessful';
-+                console.log('Copying text command was ' + msg);
-+                window.getSelection().removeAllRanges();
-+            });
-+        }
+            element.bind('click',function(){
+
+                var range = document.createRange();
+                range.selectNode(element[0]);
+                window.getSelection().removeAllRanges();
+                window.getSelection().addRange(range);
+                var successful = document.execCommand('copy');
+
+                var msg = successful ? 'successful' : 'unsuccessful';
+                console.log('Copying text command was ' + msg);
+                window.getSelection().removeAllRanges();
+            });
+        }
 
     });

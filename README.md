@@ -1,11 +1,23 @@
+
 # ngClipboard
 Just a prototype for now.
-Usage:
-###ng-copyable directive
+
+##Installation
+Include **ngClipboard.js** in your HTML.
+```html
+<script src="ngClipboard.js"></script>
+```
+
+##Usage:
+
+###```ng-copyable``` directive
 Add a "ng-copyable" attribute to any html tag to make it copyable on click.
+```html
+<div ng-copyable>Click to copy this text!</div>
+```
 
-###ngcopyable.toClipboard() factory
-Syntax:
+###```ngcopyable.toClipboard()``` factory
+Inject ngClipboard in your controller. Then send values to clipboard using
+```javascript
 ngcopyable.toClipboard(value);
-
-Sends value to clipboard.
+```

@@ -21,8 +21,8 @@ Add a "ng-copyable" attribute to any html tag to make it copyable on click.
 <div ng-copyable>Click to copy this text!</div>
 ```
 
-###```ngcopyable.toClipboard()``` factory
+###```ngClipboard.toClipboard()``` factory
 Inject ngClipboard in your controller. Then send values to clipboard using
 ```javascript
-ngcopyable.toClipboard(value);
+ngClipboard.toClipboard(value);
 ```

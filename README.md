@@ -10,6 +10,8 @@ Include **ngClipboard.js** in your HTML.
 <script src="ngClipboard.js"></script>
 ```
 
+##Demo
+[http://plnkr.co/edit/TMGDUH5IG4GazpBvT2rQ](http://plnkr.co/edit/TMGDUH5IG4GazpBvT2rQ)
 ##Usage:
 
 ###```ng-copyable``` directive

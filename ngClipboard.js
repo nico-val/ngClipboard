@@ -1,12 +1,15 @@
 angular.module('ngClipboard', [])
 
-    .factory('ngClipboard', function($compile,$rootScope) {
+    .factory('ngClipboard', function($compile,$rootScope,$document) {
         return {
             toClipboard: function(element){
 
             var copyElement = angular.element('<span id="ngClipboardCopyId">'+element+'</span>');
-            var compiled = $('body').append($compile(copyElement)($rootScope));
-            var ngClipboardElement = $('#ngClipboardCopyId');
+            var body = $document.find('body').eq(0);
+            body.append($compile(copyElement)($rootScope));
+            
+            var ngClipboardElement = angular.element(document.getElementById('ngClipboardCopyId'));
+            console.log(ngClipboardElement);
             var range = document.createRange();
 
             range.selectNode(ngClipboardElement[0]);

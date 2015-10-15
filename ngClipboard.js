@@ -4,12 +4,12 @@ angular.module('ngClipboard', [])
         return {
             toClipboard: function(element){
 
-            var newDirective = angular.element('<span id="ngClipboardCopyId">'+element+'</span>');
-            var test = $('body').append($compile(newDirective)($rootScope));
-            var test2 = $('#ngClipboardCopyId');
+            var copyElement = angular.element('<span id="ngClipboardCopyId">'+element+'</span>');
+            var compiled = $('body').append($compile(copyElement)($rootScope));
+            var ngClipboardElement = $('#ngClipboardCopyId');
             var range = document.createRange();
 
-            range.selectNode(test2[0]);
+            range.selectNode(ngClipboardElement[0]);
 
             window.getSelection().removeAllRanges();
             window.getSelection().addRange(range);
@@ -20,7 +20,7 @@ angular.module('ngClipboard', [])
             console.log('Copying text command was ' + msg);
             window.getSelection().removeAllRanges();
 
-            newDirective.remove();
+            copyElement.remove();
         }
     }
     })

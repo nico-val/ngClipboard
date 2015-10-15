@@ -1,15 +1,19 @@
 angular.module('ngClipboard', [])
 
-    .factory('copy', function($compile) {
-        return function(element, scope){
+    .factory('ngClipboard', function($compile,$rootScope) {
+        return {
+            toClipboard: function(element){
 
-            var newDirective = angular.element('<span id="ngCopyId">'+element+'</span>');
-            var test = $('body').append($compile(newDirective)(scope));
-            var test2 = $('#ngCopyId');
+            var newDirective = angular.element('<span id="ngClipboardCopyId">'+element+'</span>');
+            var test = $('body').append($compile(newDirective)($rootScope));
+            var test2 = $('#ngClipboardCopyId');
             var range = document.createRange();
+
             range.selectNode(test2[0]);
+
             window.getSelection().removeAllRanges();
             window.getSelection().addRange(range);
+
             var successful = document.execCommand('copy');
 
             var msg = successful ? 'successful' : 'unsuccessful';
@@ -17,8 +21,8 @@ angular.module('ngClipboard', [])
             window.getSelection().removeAllRanges();
 
             newDirective.remove();
-
-        };
+        }
+    }
     })
 
     .directive('ngCopyable', function() {
@@ -44,4 +48,3 @@ angular.module('ngClipboard', [])
         }
 
     });
-

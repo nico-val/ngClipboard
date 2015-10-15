@@ -12,7 +12,8 @@ Include **ngClipboard.js** in your HTML.
 
 ##Demo
 [http://plnkr.co/edit/TMGDUH5IG4GazpBvT2rQ](http://plnkr.co/edit/TMGDUH5IG4GazpBvT2rQ)
-##Usage:
+
+##Usage
 
 ###```ng-copyable``` directive
 Add a "ng-copyable" attribute to any html tag to make it copyable on click.

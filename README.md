@@ -4,6 +4,7 @@ AngularJS module to copy HTML tags on click, and send custom values to clipboard
 
 ##Installation
 Download the lastest release from [here](https://github.com/nico-val/ngClipboard/releases/lastest).
+
 Include **ngClipboard.js** in your HTML.
 ```html
 <script src="ngClipboard.js"></script>

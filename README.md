@@ -5,14 +5,16 @@ AngularJS module to copy HTML tags on click, and send custom values to clipboard
 ##Installation
 1. Download the latest release from [here](https://github.com/nico-val/ngClipboard/releases/lastest).
 
-2. Include **ngClipboard.js** in your HTML.
-```html
-<script src="ngClipboard.js"></script>
-```
+2. Include **ngClipboard.js** in your HTML. 
+
+    ```html
+    <script src="ngClipboard.js"></script>
+    ```
 3. Inject the module in your app.
-```javascript
-angular.module('myApp',['ngClipboard']);
-```
+
+    ```javascript
+    angular.module('myApp',['ngClipboard']);
+    ```
 
 ##Demo
 [http://plnkr.co/edit/TMGDUH5IG4GazpBvT2rQ](http://plnkr.co/edit/TMGDUH5IG4GazpBvT2rQ)
@@ -26,7 +28,14 @@ Add a "ng-copyable" attribute to any html tag to make it copyable on click.
 ```
 
 ###```ngClipboard.toClipboard()``` factory
-Inject ngClipboard in your controller. Then send values to clipboard using
+1. Inject ngClipboard in your controller
+    ```javascript
+    angular.controller('myController',['ngClipboard',function(ngClipboard){
+      /* ... */
+    }]);
+    ```
+
+2. Then send values to clipboard using
 ```javascript
 ngClipboard.toClipboard(value);
 ```

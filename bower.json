@@ -1,0 +1,21 @@
+{
+  "name": "ngClipboard",
+  "main": "ngClipboard.js",
+  "homepage": "https://github.com/nico-val/ngClipboard",
+  "authors": [
+    "Nicolás Valenzuela <nvalgioia@gmail.com>"
+  ],
+  "description": "Simple module that allows to make an HTML tag copyable on click or send a custom string to clipboard. Works on mobile!",
+  "keywords": [
+    "angular",
+    "clipboard"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

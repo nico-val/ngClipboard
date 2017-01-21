@@ -4,7 +4,7 @@ angular.module('ngClipboard', [])
         return {
             toClipboard: function(element){
 
-            var copyElement = angular.element('<span id="ngClipboardCopyId">'+element+'</span>');
+            var copyElement = angular.element('<textarea id="ngClipboardCopyId">'+element+'</textarea>');
             var body = $document.find('body').eq(0);
             body.append($compile(copyElement)($rootScope));
             
